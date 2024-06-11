@@ -1,0 +1,58 @@
+
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<style>
+    h5{
+        color: red;
+    }
+</style>
+
+<h1 class="text-center mt 5">SignUp for latest and good experience</h1>
+
+{% for message in messages %}
+     <h5>{{ message }}</h5>
+{% endfor %}
+<div class="container ">
+    <form action="{% url 'register' %}" method="post" class="form justify-content-center row g-3" >
+        {% csrf_token %}
+        <div class="col-md-6">
+          <label for="fname" class="form-label">First Name:</label>
+          <input type="text" class="form-control" name="first_name" id="fname" aria-describedby="emailHelp">
+        </div>
+        <div class="col-md-6">
+          <label for="lname" class="form-label">Last Name:</label>
+          <input type="text" class="form-control" name="last_name" id="lname" aria-describedby="emailHelp">
+        </div>
+        <div class="col-md-6">
+          <label for="uname" class="form-label">Username:</label>
+          <input type="text" class="form-control" name="username" id="uname" aria-describedby="emailHelp">
+        </div>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1" class="form-label">Email address:</label>
+          <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="col-md-6">
+          <label for="exampleInputPassword1" class="form-label">Password:</label>
+          <input type="password" class="form-control" name="Password" id="exampleInputPassword1">
+        </div>
+        <div class="col-md-6">
+          <label for="exampleInputPassword2" class="form-label">Confirm Password:</label>
+          <input type="password" class="form-control" name="Password1" id="exampleInputPassword2">
+        </div>
+        <div class="col-12">
+        <button type="submit" class="btn btn-primary mt-3 mb-3">Submit</button>
+        </div>
+      </form>
+    
+</div>
+{% endblock  %}
+
+
+
+
+
+

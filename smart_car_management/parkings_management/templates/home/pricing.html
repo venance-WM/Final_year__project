@@ -1,0 +1,73 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+ {% block content %}
+<section class="pricing_section layout_padding">
+    <div class="bg-box">
+      <img src="{% static 'parking/images/pricing-bg.jpg' %}" alt="">
+    </div>
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Pricing
+        </h2>
+      </div>
+      <div class="col-xl-10 px-0 mx-auto">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mx-auto">
+            <div class="box">
+              <h4 class="price">
+                Tzs 2500 /=
+              </h4>
+              <h5 class="name">
+                Basic
+              </h5>
+              <p>
+                Secure your parking spot with ease!  We offer convenient car parking for a flat rate of 2500 Tanzanian Shillings (TZS). This simple pricing structure allows you to budget effectively and avoid any surprises.
+                Book your parking online today and enjoy a stress-free arrival!</p>
+              <a href="#">
+                Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mx-auto">
+            <div class="box box-center">
+              <h4 class="price">
+                Tzs 7500 /=
+              </h4>
+              <h5 class="name">
+                Premium
+              </h5>
+              <p>
+                Elevate your parking experience with our premium option!  For 7500 Tanzanian Shillings (TZS), you'll enjoy exclusive benefits like guaranteed close-in parking for ultimate convenience. 
+                No more circling for the perfect spot - with premium parking Book your premium spot online and experience a whole new level of parking ease!</p>
+              <a href="#">
+                Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mx-auto">
+            <div class="box">
+              <h4 class="price">
+                Tzs 5000 /=
+              </h4>
+              <h5 class="name">
+                Standard
+              </h5>
+              <p>
+                Park with peace of mind! Our standard car parking rate is 5000 Tanzanian Shillings (TZS).
+                 This rate offers secure parking for your vehicle and is perfect for most everyday parking needs.
+                 The online reservation system allows you to book your spot in advance, guaranteeing a hassle-free parking experience.
+              </p>
+              <a href="#">
+                Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ {% endblock  %}

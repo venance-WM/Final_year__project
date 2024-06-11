@@ -1,0 +1,55 @@
+
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<style>
+    h5{
+        color: red;
+    }
+</style>
+
+
+
+<h1 class="text-center mt 5">Login for latest and good experience</h1>
+
+
+  <div class="container ">
+<form action="{% url 'login' %}" method="POST" class="form">
+    {% csrf_token %}
+
+{% for message in messages %}
+ <h5>{{ message }}</h5>
+{% endfor %}
+
+  
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" name="password" id="password" required>
+          </div>
+          <button type="submit" class="btn btn-success mb-3">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+    </div>
+</form>
+{% endblock  %}
+
+
+
+
+
+
+
+

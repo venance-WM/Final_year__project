@@ -1,0 +1,34 @@
+
+{% extends 'home/base.html' %}
+{% load static %}
+
+]
+{% block content %}
+ <div class="hero_area">
+      <a class="navbar-brand" href="{% url 'index' %}">
+            <span>
+             <i>smartParking</i>
+            </span>
+          </a>
+    <div class="bg-box">
+      <img src="{% static 'parking/images/slider-bg.jpg' %}" alt="background image">
+    </div>
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container">
+        <div class="detail-box col-md-9 mx-auto px-0">
+          <h1>
+            search for parking you want easily and fast
+          </h1>
+          <p class="text-light">
+            For better car parking and maximum security that is being provided by us
+         </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+{% endblock  %}
+

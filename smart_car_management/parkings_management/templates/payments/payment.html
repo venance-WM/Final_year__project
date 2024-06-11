@@ -1,0 +1,68 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5 mb-2 ">
+    <h2 class="text-center text-info">Choose Your Payment Method</h2>
+    <div class="row ">
+      <div class="col-md-2">
+        <div class="card bg-dark text-white">
+          <img height="200px" width="200px" src="{% static 'parking/images/mpesa.png' %}" class="card-img-top" alt="Mpesa Logo">
+          <div class="card-body">
+            <h5 class="card-title">M-pesa</h5>
+            <p class="card-text">Pay conveniently using your Mpesa mobile money.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card bg-dark text-white">
+          <img height="200px" width="200px" src="{% static 'parking/images/tigopesa.jpg' %}" class="card-img-top" alt="Mpesa Logo">
+          <div class="card-body">
+            <h5 class="card-title">Tigo-pesa</h5>
+            <p class="card-text">Pay conveniently using your Tigo-pesa mobile money.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card bg-dark text-white">
+          <img height="200px" width="200px" src="{% static 'parking/images/halopesa.png' %}" class="card-img-top" alt="Mpesa Logo">
+          <div class="card-body">
+            <h5 class="card-title">Halopesa</h5>
+            <p class="card-text">Pay conveniently using your Halopesa mobile money.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card bg-dark text-white">
+          <img height="200px" width="200px" src="{% static 'parking/images/airtelmoney.png' %}" class="card-img-top" alt="Mpesa Logo">
+          <div class="card-body">
+            <h5 class="card-title">Airtel Money</h5>
+            <p class="card-text">Pay conveniently using your Airtelmoney mobile money.</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-2">
+        <div class="card bg-dark text-white">
+          <img height="200px" width="200px" src="{% static 'parking/images/visa.png' %}" class="card-img-top" alt="Visa Logo">
+          <div class="card-body">
+            <h5 class="card-title">Visa</h5>
+            <p class="card-text">Use your Visa card for a secure and fast payment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card bg-dark text-white">
+          <img height="200px" width="200px" src="{% static 'parking/images/card1.jpg' %}" class="card-img-top" alt="Credit Card Logo">
+          <div class="card-body">
+            <h5 class="card-title">Credit&Debit </h5>
+            <p class="card-text">Pay using your Mastercard, Maestro, or any other.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+{% endblock  %}
+

@@ -1,0 +1,61 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    h5 {
+        color: red;
+    }
+</style>
+<div class="container mt-3">
+    <h1 class="text-center">Car Parking Booking form</h1>
+    <form action="{% url 'place_booking' %}" method="post" class="row g-3">
+        {% csrf_token %}
+
+        {% for message in messages %}
+        <h5>{{ message }}</h5>
+        {% endfor %}
+        <div class="col-md-6">
+            <label for="user" class="form-label"> Username</label>
+            <input type="text" class="form-control" id="user" value="{{ request.user.username }}" name="user" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="car_name" class="form-label">vehicle name</label>
+            <input type="text" class="form-control" id="car_name" name="car_name"  required>
+        </div>
+        <div class="col-md-6">
+            <label for="plate_number" class="form-label">Plate Number</label>
+            <input type="text" class="form-control" id="plate_number" name="plate_number"  required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="booking_duration" class="form-label">Parking Duration (Hours)</label>
+            <input type="number"  class="form-control" id="booking_duration" name="booking_duration" required>
+        </div>
+        <div class="col-md-6">
+            <label for="booking_time" class="form-label">Arrival Date&Time</label>
+            <input type="datetime-local" class="form-control" id="booking_time" name="booking_time" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="remarks" class="form-label">remarks</label>
+            <input type="text" class="form-control" id="remarks" name="remarks" required>
+        </div>
+
+        <div class="col-md-6 mt-2">
+            <label for="slot_number" class="form-label">slot number</label>
+            <input type="integer" class="form-control" id="slot_number" value="{{ slot.slot_number }}" name="slot"
+                required>
+        </div>
+        <div class="col-md-6 mt-2">
+            <label for="is_active"> verify book <br>{{ MyForm.is_active.label }}</label>
+            <input type="checkbox" id="is_active" name="booking_status" value="True" >
+        </div>
+
+        <div class="col-12 mb-2 mt-3">
+            <button type="submit" class="btn btn-primary ">Book Slot</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

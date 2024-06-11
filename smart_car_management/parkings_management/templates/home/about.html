@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="about_section layout_padding">
+    <div class="container  ">
+        <div class="heading_container ">
+            <h2>
+                About Us
+            </h2>
+            <p>
+                We provide the car parking means for both car drivers and parking owners through registering their
+                parking to our site so can be seen to our customers.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="img-box">
+                    <img src="{% static 'parking/images/about-img.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="detail-box">
+                    <h3>
+                        We Are Here For Help
+                    </h3>
+                    <p>
+                        We understand the frustration of circling endlessly for a parking spot.
+                         That's why we developed SCALABLE SMART CAR PARKING. 
+                         Our mission is to streamline the parking experience, 
+                         making it easier and faster for drivers to find available spaces.
+                          Through innovative technology and user-friendly interfaces, we aim to reduce congestion, improve traffic flow, and create a stress-free parking experience for everyone.
+                    </p>
+                    <p>
+                        Our user-friendly platform allows you to browse available spaces, book your spot with just a few clicks, and arrive with peace of mind, knowing your parking is secured."
+                    </p>
+                    <a href="#">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

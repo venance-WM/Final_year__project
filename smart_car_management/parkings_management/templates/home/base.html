@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'parking/images/favicon.png' %}" type="image/x-icon">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'parking/css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- nice selecy -->
+  <link rel="stylesheet" href="{% static 'parking/css/nice-select.min.css' %}">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+
+  <link href= "{% static 'parking/css/font-awesome.min.css' %} " rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'parking/css/style.css'  %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'parking/css/responsive.css' %}" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap-theme-dark.min.css" rel="stylesheet" integrity="sha384-fenBHZleSovZqJA4aLwIp6ULeuYTCzYwG5qOGouqjYlIi9sqOnfVEXl6BKGmWSuq" crossorigin="anonymous">
+</head>
+<body>
+{% include 'home/navbar.html' %}
+
+            {% block content %}
+
+            {% endblock content %}
+
+<!--The footer start here-->
+
+  <section class="info_section ">
+
+    <div class="container">
+      <div class="info_top ">
+        <div class="row ">
+          <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_form">
+              <h4>
+                Stay Connected
+              </h4>
+              <form action="">
+                <input type="text" placeholder="Enter Your Email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col ">
+            <div class="info_detail">
+              <h4>
+                About Us
+              </h4>
+              <p>
+                We provide the car parking means for both car drivers and parking owners through registering their parking to our site so that can be seen to customers.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col ">
+            <div class="info_detail">
+              <h4>
+                Online Booking
+              </h4>
+              <p> This functionality helps you to reserve the available empty space ahead of time hence provides plan for your journey and eliminates the guesswork from your daily commute.
+                
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col">
+            <h4>
+              Contact us
+            </h4>
+            <p>
+             Communicate With Us.
+            </p>
+            <div class="contact_nav">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Current Location.
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call : +255621899959
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  Email : smartparking@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+  <!-- footer section -->
+  <footer class="footer_section" style="background-color:gray;">
+    <div class="container text-light">
+      <p class=" text-light">
+        &copy; <span id="displayYear"></span> Fast and Easy parking Experience is our Pleasure.
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQuery -->
+  <script src="{% static 'parking/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+  </script>
+  <!-- nice select -->
+  <script src="{% static 'parking/js/jquery.nice-select.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'parking/js/bootstrap.js' %}"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-Ogwbqwo1nLfmEJ3cpqMhGFfTCYbQ9toAiO4BUjqk3vOMCkLMz0GTxnwG8t7zAXQo" crossorigin="anonymous"></script>
+  <!-- custom js -->
+  <script src="{% static 'parking/js/custom.js' %}"></script>
+
+</body>
+</html>

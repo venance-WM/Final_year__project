@@ -1,0 +1,49 @@
+
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<h1>choose The parking you want in {{ park }}</h1>
+<table class="table table-dark table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Parking Number</th>
+        <th scope="col">Name of city</th>
+        <th scope="col">address </th>
+        <th scope="col">Available Parkings</th>
+        <th scope="col">Location</th>
+        <th scope="col">Total Slots</th>
+        <th scope="col">Available Slots</th>
+        <th scope="col">Hourly Fee</th>
+        <th scope="col">Daily Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for parking in parkings %}
+        <th scope="row">{{ parking.id }}</th>
+        <td>{{ parking.name }}</td>
+        <td>{{ parking.address }}</td>
+        <td>{{ parking.available_parkings }}</td>
+        <td>{{ parking.total_spaces }}</td>
+        <td>{{ parking.latitude }},{{ parking.longitude }}</td>
+        <td>{{ parking.hourly_fee }}</td>
+        <td>{{ parking.daily_fee }}</td>
+       
+      </tr>
+      <tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock  %}
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+ <section class="why_section layout_padding-bottom">
+    <div class="container">
+      <div class="col-md-10 px-0">
+        <div class="heading_container">
+          <h2>
+            Why Choose Us
+          </h2>
+          <div class="container">
+            <p>
+                Our Scalable smart parking project is transforming how we find and manage parking. By embracing technology, we can create a smoother, more efficient, and environmentally friendly parking experience for everyone. Stay tuned for updates as we continue to develop and implement this innovative solution.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'parking/images/w1.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                No Booking Fees
+              </h4>
+              <p>Skip the hidden costs! Unlike other parking systems, with [Company Name] you only pay for the parking itself. We completely eliminate booking fees, saving you money and simplifying the process. Simply find your desired location and available spot, reserve it with a few clicks, and arrive knowing your parking is secured – all without any additional charges on top of the standard parking rate. Park smarter, not harder, with [Company Name].</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'parking/images/w2.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Online Payments
+              </h4>
+              <p>
+               
+                Ditch the hassle of searching for cash! Our car parking system prioritizes your convenience with secure online payments.  Forget scrambling for coins or running to an ATM.  Once you reserve your spot through our user-friendly online platform, you can seamlessly pay for your parking using a debit, credit card, or even a mobile wallet.  Our system utilizes secure encryption to ensure your financial information remains protected throughout the transaction.
+            </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'parking/images/w3.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Simple Booking Process
+              </h4>
+              <p>Ditch the parking lot panic! Our system makes securing your spot a breeze. Simply head to our website or mobile app. In just a few clicks, you can browse available spaces, choose your preferred parking duration, and confirm your reservation. No need to print tickets or fumble with cash -payment is handled securely online.  Arrive at the designated lot, follow the easy signage, and park with peace of mind, knowing your space is guaranteed.
+                  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock  %}
+

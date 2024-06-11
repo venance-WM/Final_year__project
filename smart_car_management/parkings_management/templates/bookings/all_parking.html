@@ -1,0 +1,27 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center text-success">Parking Availability</h1>
+    <div class="row">
+      {% for park in parkings %}
+        <div class="col-md-3 mb-3">
+             <div class="card text-center bg-info text-white">
+            <div class="card-header">
+              <a href="{% url 'parking_detail' park.id %} "  class="text-white">{{ park.park_name }}</a>
+            </div>
+            <div class="parking-info">
+              <p>Address: {{ park.address }}</p>
+              <p>Total Spaces: {{ park.total_spaces }}</p>
+              <p>Available Spaces: {{ park.available_spaces }}</p>
+              <p>Hourly Fee: {{ park.hourly_fee }}</p>
+              <p>Daily Fee: {{ park.daily_fee }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center bg-dark text-white" id="parking-name">
+    <span class="marquee-text">Welcome to {{ parking.park_name }}</span>
+</h1>
+<div class="table-container">
+<div class="caption text-center text-info">
+    <caption>
+    Book and reserve your space by clicking the <b><i> BOOK NOW</i></b> button
+    </caption>
+    <p class="mt-2">Total Spaces:{{ parking.total_spaces }}</p>
+    <p>Available Spaces:{{ parking.available_spaces }}</p>
+</div>    
+
+      
+<div class="container">
+    <div class="row">
+      {% for parking in parking_lots %}
+        <div class="col-md-3 mb-3">
+          <div class="card bg-light text-dark shadow">
+              <ul class="list-group list-group-flush">
+              <li class="list-group-item">Slot Number: {{ parking.slot_number }}</li>
+              <li class="list-group-item">
+                {% if parking.is_occupied %}
+                  <a href="#" class="btn btn-secondary disabled">Occupied</a>
+                {% else %}
+                  <a href="{% url 'book_form' parking.id %}" class="btn btn-primary">Book Now</a>
+                {% endif %}
+              </li>
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+         <script>
+            const marqueeText = document.querySelector(".marquee-text");
+            marqueeText.style.animationDuration = "10s"; // Adjust animation duration (in seconds)
+         </script>
+
+{% endblock %}
